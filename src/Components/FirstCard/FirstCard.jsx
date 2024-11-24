@@ -1,0 +1,213 @@
+const FirstCard = () => {
+  return (
+    <div className="absolute grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-[80px] px-6 animate-fadeInDown">
+      {/* Card 1: Project with Image */}
+      <div className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105  animate-slideInLeft ">
+        <img
+          src="/chat_app_ui.png"
+          alt="Video Sharing App"
+          className="rounded-lg w-full h-48 object-cover shadow-md transition-transform duration-300 hover:scale-105 "
+        />
+        <div className="flex items-center justify-between mt-4">
+          <p className="text-white text-lg font-bold truncate flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-blue-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 10l4.553 2.276a2 2 0 010 3.448L15 18m-6-8l-4.553 2.276a2 2 0 000 3.448L9 18m6-8v8m-6-8v8"
+              />
+            </svg>
+            Chat App
+          </p>
+          <a
+            href="https://github.com/FullStackDevloperShubham/chat-app"
+            className="text-blue-400 font-semibold text-sm underline hover:text-blue-300"
+          >
+            View Details
+          </a>
+        </div>
+      </div>
+
+      {/* Card 2: Project with Video */}
+      <div className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105  animate-slideInLeft">
+        <img
+          src="/video_sharing_app.jpg"
+          alt="Video Sharing App"
+          className="rounded-lg w-full h-48 object-cover shadow-md transition-transform duration-300 hover:scale-105"
+        />
+        <div className="flex items-center justify-between mt-4">
+          <p className="text-white text-lg font-bold truncate flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-blue-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 10l4.553 2.276a2 2 0 010 3.448L15 18m-6-8l-4.553 2.276a2 2 0 000 3.448L9 18m6-8v8m-6-8v8"
+              />
+            </svg>
+            Video Sharing App
+          </p>
+          <a
+            href="https://github.com/FullStackDevloperShubham/VideoSharingBackend"
+            className="text-blue-400 font-semibold text-sm underline hover:text-blue-300"
+          >
+            View Details
+          </a>
+        </div>
+      </div>
+
+
+      {/* Card 3: Text Description */}
+      <div className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105  animate-slideInLeft">
+        <img
+          src="/google_gemini.jpg"
+          alt="Video Sharing App"
+          className="rounded-lg w-full h-48 object-cover shadow-md transition-transform duration-300 hover:scale-105"
+        />
+        <div className="flex items-center justify-between mt-4">
+          <p className="text-white text-lg font-bold truncate flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-blue-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 10l4.553 2.276a2 2 0 010 3.448L15 18m-6-8l-4.553 2.276a2 2 0 000 3.448L9 18m6-8v8m-6-8v8"
+              />
+            </svg>
+            Google Gemini
+          </p>
+          <a
+            href="https://github.com/FullStackDevloperShubham/GeminiClone"
+            className="text-blue-400 font-semibold text-sm underline hover:text-blue-300"
+          >
+            View Details
+          </a>
+        </div>
+      </div>
+
+
+      {/* Card 4: Blog or Article */}
+      <div className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105  animate-slideInRight">
+        <img
+          src="blog_sharing.webp"
+          alt="Video Sharing App"
+          className="rounded-lg w-full h-48 object-cover shadow-md transition-transform duration-300 hover:scale-105"
+        />
+        <div className="flex items-center justify-between mt-4">
+          <p className="text-white text-lg font-bold truncate flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-blue-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 10l4.553 2.276a2 2 0 010 3.448L15 18m-6-8l-4.553 2.276a2 2 0 000 3.448L9 18m6-8v8m-6-8v8"
+              />
+            </svg>
+            Blog Sharing
+          </p>
+          <a
+            href="https://github.com/FullStackDevloperShubham/BlogApp"
+            className="text-blue-400 font-semibold text-sm underline hover:text-blue-300"
+          >
+            View Details
+          </a>
+        </div>
+      </div>
+
+      {/* Card 5: Skills */}
+      <div className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105  animate-slideInRight">
+        <img
+          src="/authentication.jpg"
+          alt="Video Sharing App"
+          className="rounded-lg w-full h-48 object-cover shadow-md transition-transform duration-300 hover:scale-105"
+        />
+        <div className="flex items-center justify-between mt-4">
+          <p className="text-white text-lg font-bold truncate flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-blue-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 10l4.553 2.276a2 2 0 010 3.448L15 18m-6-8l-4.553 2.276a2 2 0 000 3.448L9 18m6-8v8m-6-8v8"
+              />
+            </svg>
+            Authentication
+          </p>
+          <a
+            href="https://github.com/FullStackDevloperShubham/Next_Authentication"
+            className="text-blue-400 font-semibold text-sm underline hover:text-blue-300"
+          >
+            View Details
+          </a>
+        </div>
+      </div>
+
+      {/* Card 6: Client Testimonial */}
+      <div className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105  animate-slideInRight">
+        <img
+          src="/task_manager.jpg"
+          alt="Video Sharing App"
+          className="rounded-lg w-full h-48 object-cover shadow-md transition-transform duration-300 hover:scale-105"
+        />
+        <div className="flex items-center justify-between mt-4">
+          <p className="text-white text-lg font-bold truncate flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-blue-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 10l4.553 2.276a2 2 0 010 3.448L15 18m-6-8l-4.553 2.276a2 2 0 000 3.448L9 18m6-8v8m-6-8v8"
+              />
+            </svg>
+            Task manager for daily routine
+          </p>
+          <a
+            href="https://github.com/FullStackDevloperShubham/task-manager"
+            className="text-blue-400 font-semibold text-sm underline hover:text-blue-300"
+          >
+            View Details
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default FirstCard;

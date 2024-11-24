@@ -1,0 +1,37 @@
+/* Default text style */
+.text-border-hover {
+  display: inline-block; /* Make sure the text behaves like a block */
+  padding: 2px; /* Add some padding around the text */
+  position: relative; /* Allow the pseudo-element to position relative to the text */
+  font-size: 16px; /* Set your desired font size */
+  color: black; /* Default text color */
+  transition: color 0.3s ease; /* Smooth transition for text color change */
+}
+
+/* Add the thin light border effect on hover */
+.text-border-hover:hover {
+  color: gray; /* Keep the text color black on hover */
+}
+
+/* Create the border animation */
+.text-border-hover::after {
+  content: ""; /* Empty content to create the pseudo-element */
+  position: absolute; /* Position it around the text */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid lightgray; /* Thin light line around the text */
+  border-radius: 4px; /* Optional: Round the corners of the border */
+  opacity: 0; /* Initially make it invisible */
+  transform: scale(0); /* Start with the border scaled down */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and scaling */
+  pointer-events: none; /* Prevent interaction with the pseudo-element */
+}
+
+/* Apply the border animation after hover */
+.text-border-hover:hover::after {
+  opacity: 1; /* Make the border visible on hover */
+  transform: scale(1); /* Restore the border to its original size */
+  transition-delay: 0.1ms; /* Delay the animation to start after hover */
+}
