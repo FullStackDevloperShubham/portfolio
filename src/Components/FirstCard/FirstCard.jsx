@@ -1,15 +1,17 @@
 const FirstCard = () => {
   return (
     <div className="absolute grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-[80px] px-6 animate-fadeInDown">
+
       {/* Card 1: Project with Image */}
-      <div className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105  animate-slideInLeft ">
+
+      <div className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105" >
         <img
           src="/chat_app_ui.png"
-          alt="Video Sharing App"
-          className="rounded-lg w-full h-48 object-cover shadow-md transition-transform duration-300 hover:scale-105 "
+          alt="Chat App"
+          className="rounded-lg w-full h-48 object-cover shadow-md transition-transform duration-300 hover:scale-105"
         />
         <div className="flex items-center justify-between mt-4">
-          <p className="text-white text-lg font-bold truncate flex items-center gap-2">
+          <p className="text-gray-400 text-lg font-bold truncate flex items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 text-blue-400"
@@ -36,7 +38,9 @@ const FirstCard = () => {
       </div>
 
       {/* Card 2: Project with Video */}
-      <div className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105  animate-slideInLeft">
+      <div
+        className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105"
+      >
         <img
           src="/video_sharing_app.jpg"
           alt="Video Sharing App"
@@ -68,7 +72,6 @@ const FirstCard = () => {
           </a>
         </div>
       </div>
-
 
       {/* Card 3: Text Description */}
       <div className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105  animate-slideInLeft">
@@ -103,7 +106,6 @@ const FirstCard = () => {
           </a>
         </div>
       </div>
-
 
       {/* Card 4: Blog or Article */}
       <div className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105  animate-slideInRight">
@@ -206,7 +208,7 @@ const FirstCard = () => {
           </a>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

@@ -14,19 +14,19 @@ const Skills = () => {
             <h3 className="text-2xl font-semibold text-teal-500 mb-4">Frontend Technologies</h3>
             <div className="grid grid-cols-3 gap-4 justify-center items-center h-full">
               {/* HTML */}
-              <div className="text-center flex flex-col items-center">
+              <div className="text-center flex flex-col items-center text-gray-400">
                 <FaHtml5 className="text-5xl text-orange-500 mb-2" />
                 HTML
               </div>
 
               {/* CSS */}
-              <div className="text-center flex flex-col items-center">
+              <div className="text-center flex flex-col items-center text-gray-400">
                 <FaCss3Alt className="text-5xl text-blue-500 mb-2" />
                 CSS
               </div>
 
               {/* JavaScript */}
-              <div className="text-center flex flex-col items-center">
+              <div className="text-center flex flex-col items-center ">
                 <FaJs className="text-5xl text-yellow-500 mb-2" />
                 JavaScript
               </div>
