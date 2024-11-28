@@ -3,6 +3,11 @@ const FirstCard = () => {
   return (
     <div className="absolute grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-[80px] px-6 animate-fadeInDown">
 
+      {/* Mobile Number at the Top Right */}
+      <div className="absolute flex mt-[-70px] right-6 sm:right-10 lg:right-20 text-white bg-blue-600 p-2 rounded-lg shadow-md font-serif text-lg">
+        <p>+91 7385911875</p> {/* Replace with your actual mobile number */}
+      </div>
+
       {/* Card 1: Project with Image */}
 
       <motion.div
