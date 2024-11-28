@@ -1,10 +1,21 @@
+import { motion } from 'framer-motion'
 const FirstCard = () => {
   return (
     <div className="absolute grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-[80px] px-6 animate-fadeInDown">
 
       {/* Card 1: Project with Image */}
 
-      <div className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105" >
+      <motion.div
+        className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105"
+        initial={{ y: -100, opacity: 0 }} // Initial state (above the viewport and invisible)
+        animate={{ y: [0, -15, 5, -5, 0], opacity: 1 }} // Bounce effect
+        transition={{
+          type: "spring", // Spring-based animation
+          stiffness: 50, // Spring stiffness (controls how "bouncy" it is)
+          damping: 5, // Damping (controls how fast it settles)
+          duration: 5, // Total animation duration
+        }}
+      >
         <img
           src="/chat_app_ui.png"
           alt="Chat App"
@@ -35,11 +46,19 @@ const FirstCard = () => {
             View Details
           </a>
         </div>
-      </div>
+      </motion.div>
 
       {/* Card 2: Project with Video */}
-      <div
+      <motion.div
         className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105"
+        initial={{ y: -100, opacity: 0 }} // Initial state (above the viewport and invisible)
+        animate={{ y: [0, -15, 5, -5, 0], opacity: 1 }} // Bounce effect
+        transition={{
+          type: "spring", // Spring-based animation
+          stiffness: 50, // Spring stiffness (controls how "bouncy" it is)
+          damping: 5, // Damping (controls how fast it settles)
+          duration: 5, // Total animation duration
+        }}
       >
         <img
           src="/video_sharing_app.jpg"
@@ -71,10 +90,20 @@ const FirstCard = () => {
             View Details
           </a>
         </div>
-      </div>
+      </motion.div>
 
       {/* Card 3: Text Description */}
-      <div className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105  animate-slideInLeft">
+      <motion.div
+        className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105"
+        initial={{ y: -100, opacity: 0 }} // Starts from above and invisible
+        animate={{ y: [0, -15, 5, -5, 0], opacity: 1 }} // Bounce animation
+        transition={{
+          type: "spring", // Spring-based animation
+          stiffness: 50, // Spring stiffness (controls how "bouncy" it is)
+          damping: 5, // Damping (controls how fast it settles)
+          duration: 5, // Total animation duration
+        }}
+      >
         <img
           src="/google_gemini.jpg"
           alt="Video Sharing App"
@@ -105,10 +134,20 @@ const FirstCard = () => {
             View Details
           </a>
         </div>
-      </div>
+      </motion.div>
 
       {/* Card 4: Blog or Article */}
-      <div className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105  animate-slideInRight">
+      <motion.div
+        className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105"
+        initial={{ y: -100, opacity: 0 }} // Starts from above and invisible
+        animate={{ y: [0, -15, 5, -5, 0], opacity: 1 }} // Bounce animation
+        transition={{
+          type: "spring", // Spring-based animation
+          stiffness: 50, // Spring stiffness (controls how "bouncy" it is)
+          damping: 5, // Damping (controls how fast it settles)
+          duration: 5, // Total animation duration
+        }}
+      >
         <img
           src="blog_sharing.webp"
           alt="Video Sharing App"
@@ -139,13 +178,23 @@ const FirstCard = () => {
             View Details
           </a>
         </div>
-      </div>
+      </motion.div>
 
       {/* Card 5: Skills */}
-      <div className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105  animate-slideInRight">
+      <motion.div
+        className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105"
+        initial={{ y: -100, opacity: 0 }} // Starts from above and invisible
+        animate={{ y: [0, -15, 5, -5, 0], opacity: 1 }} // Bounce animation
+        transition={{
+          type: "spring", // Spring-based animation
+          stiffness: 50, // Spring stiffness (controls how "bouncy" it is)
+          damping: 5, // Damping (controls how fast it settles)
+          duration: 5, // Total animation duration
+        }}
+      >
         <img
           src="/authentication.jpg"
-          alt="Video Sharing App"
+          alt="Authentication App"
           className="rounded-lg w-full h-48 object-cover shadow-md transition-transform duration-300 hover:scale-105"
         />
         <div className="flex items-center justify-between mt-4">
@@ -173,14 +222,28 @@ const FirstCard = () => {
             View Details
           </a>
         </div>
-      </div>
+      </motion.div>
 
       {/* Card 6: Client Testimonial */}
-      <div className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105  animate-slideInRight">
-        <img
+      <motion.div
+        className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105 animate-slideInRight"
+        initial={{ y: -100, opacity: 0 }} // Starts from above and invisible
+        animate={{ y: 0, opacity: 1 }} // Final position and full opacity
+        transition={{
+          type: "spring", // Spring-based animation
+          stiffness: 50, // Spring stiffness (controls how "bouncy" it is)
+          damping: 5, // Damping (controls how fast it settles)
+          duration: 5, // Total animation duration
+        }}
+      >
+        <motion.img
           src="/task_manager.jpg"
           alt="Video Sharing App"
           className="rounded-lg w-full h-48 object-cover shadow-md transition-transform duration-300 hover:scale-105"
+        // whileHover={{
+        //   scale: 1.05,
+        //   transition: { type: "spring", stiffness: 300, damping: 15 },
+        // }}
         />
         <div className="flex items-center justify-between mt-4">
           <p className="text-white text-lg font-bold truncate flex items-center gap-2">
@@ -207,7 +270,8 @@ const FirstCard = () => {
             View Details
           </a>
         </div>
-      </div>
+      </motion.div>
+
     </div >
   );
 };

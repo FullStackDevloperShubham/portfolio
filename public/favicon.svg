@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+  <!-- Background -->
+  <rect width="48" height="48" rx="8" fill="#1A1A2E" />
+  <!-- Inner Shape -->
+  <path d="M24 8 L32 24 L24 40 L16 24 Z" fill="#00C6FF" />
+  <!-- Letter -->
+  <text x="50%" y="50%" fill="white" font-size="12" font-family="Arial, sans-serif" font-weight="bold" text-anchor="middle" alignment-baseline="middle">
+    S
+  </text>
+</svg>

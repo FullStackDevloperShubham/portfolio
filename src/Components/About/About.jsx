@@ -9,11 +9,10 @@ const About = () => {
           {/* About Me Content */}
           <motion.p
             className="text-sm sm:text-base md:text-lg lg:text-xl mt-4 leading-relaxed w-full text-center"
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.2 }}
             whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-            style={{ transformOrigin: "center" }}
           >
             I am a <span className="text-blue-400 font-semibold">Full Stack Web Developer</span> with a passion for creating
             innovative and user-friendly web applications. I specialize in modern technologies like{" "}
@@ -25,11 +24,10 @@ const About = () => {
 
           <motion.p
             className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed w-full text-center"
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.4 }}
             whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-            style={{ transformOrigin: "center" }}
           >
             My journey into web development began as a hobby where I enjoyed experimenting with code, and it quickly turned
             into a passion. Over the years, I have gained experience in developing full-stack applications, working with
@@ -38,11 +36,10 @@ const About = () => {
 
           <motion.p
             className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed w-full text-center"
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.6 }}
             whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-            style={{ transformOrigin: "center" }}
           >
             My goal is to stay at the forefront of industry trends and technologies to ensure my work is always cutting-edge. I thrive in{" "}
             <span className="text-indigo-600 font-semibold">collaborative</span> environments, aligning my contributions with
@@ -52,11 +49,10 @@ const About = () => {
 
           <motion.p
             className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed w-full text-center"
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.8 }}
             whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-            style={{ transformOrigin: "center" }}
           >
             I also believe in the importance of continuous learning and growth. Whether it’s exploring new programming languages,
             diving into new frameworks, or enhancing my problem-solving skills, I am always seeking ways to improve my craft. My
@@ -65,11 +61,10 @@ const About = () => {
 
           <motion.p
             className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed w-full text-center"
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20, delay: 1.0 }}
             whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-            style={{ transformOrigin: "center" }}
           >
             Beyond coding, I enjoy contributing to{" "}
             <span className="text-teal-600 font-semibold">open-source projects</span>, exploring new technologies, and participating
@@ -79,16 +74,16 @@ const About = () => {
 
           <motion.p
             className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed w-full text-center"
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20, delay: 1.2 }}
             whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-            style={{ transformOrigin: "center" }}
           >
             Thank you for visiting my portfolio. I’m excited to connect and collaborate to bring your ideas to life!
           </motion.p>
         </div>
       </div>
+
 
     </>
   )

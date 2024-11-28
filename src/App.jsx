@@ -13,7 +13,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-
       <div className="relative w-full h-screen overflow-hidden">
         {/* Static Blue Wave with Three Peaks */}
         <div className="absolute top-0 left-0 w-full h-full -z-10">
@@ -42,7 +41,6 @@ function App() {
           </Routes>
         </div>
       </div>
-
 
     </>
   );
