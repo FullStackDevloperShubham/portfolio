@@ -12,6 +12,12 @@ const FirstCard = () => {
 
       <motion.div
         className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105"
+        style={{
+          background: "rgba(255, 255, 255, 0.1)", // Translucent background
+          backdropFilter: "blur(10px)", // Frosted glass effect
+          WebkitBackdropFilter: "blur(10px)", // For Safari
+          border: "1px solid rgba(255, 255, 255, 0.2)", // Subtle border
+        }}
         initial={{ y: -100, opacity: 0 }} // Initial state (above the viewport and invisible)
         animate={{ y: [0, -15, 5, -5, 0], opacity: 1 }} // Bounce effect
         transition={{
@@ -53,9 +59,16 @@ const FirstCard = () => {
         </div>
       </motion.div>
 
+
       {/* Card 2: Project with Video */}
       <motion.div
         className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105"
+        style={{
+          background: "rgba(255, 255, 255, 0.1)", // Translucent background
+          backdropFilter: "blur(10px)", // Frosted glass effect
+          WebkitBackdropFilter: "blur(10px)", // For Safari
+          border: "1px solid rgba(255, 255, 255, 0.2)", // Subtle border
+        }}
         initial={{ y: -100, opacity: 0 }} // Initial state (above the viewport and invisible)
         animate={{ y: [0, -15, 5, -5, 0], opacity: 1 }} // Bounce effect
         transition={{
@@ -97,9 +110,16 @@ const FirstCard = () => {
         </div>
       </motion.div>
 
+
       {/* Card 3: Text Description */}
       <motion.div
         className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105"
+        style={{
+          background: "rgba(255, 255, 255, 0.1)", // Translucent background
+          backdropFilter: "blur(10px)", // Frosted glass effect
+          WebkitBackdropFilter: "blur(10px)", // For Safari
+          border: "1px solid rgba(255, 255, 255, 0.2)", // Subtle border
+        }}
         initial={{ y: -100, opacity: 0 }} // Starts from above and invisible
         animate={{ y: [0, -15, 5, -5, 0], opacity: 1 }} // Bounce animation
         transition={{
@@ -144,6 +164,12 @@ const FirstCard = () => {
       {/* Card 4: Blog or Article */}
       <motion.div
         className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105"
+        style={{
+          background: "rgba(255, 255, 255, 0.1)", // Translucent background
+          backdropFilter: "blur(10px)", // Frosted glass effect
+          WebkitBackdropFilter: "blur(10px)", // For Safari
+          border: "1px solid rgba(255, 255, 255, 0.2)", // Subtle border
+        }}
         initial={{ y: -100, opacity: 0 }} // Starts from above and invisible
         animate={{ y: [0, -15, 5, -5, 0], opacity: 1 }} // Bounce animation
         transition={{
@@ -188,6 +214,12 @@ const FirstCard = () => {
       {/* Card 5: Skills */}
       <motion.div
         className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105"
+        style={{
+          background: "rgba(255, 255, 255, 0.1)", // Translucent background
+          backdropFilter: "blur(10px)", // Frosted glass effect
+          WebkitBackdropFilter: "blur(10px)", // For Safari
+          border: "1px solid rgba(255, 255, 255, 0.2)", // Subtle border
+        }}
         initial={{ y: -100, opacity: 0 }} // Starts from above and invisible
         animate={{ y: [0, -15, 5, -5, 0], opacity: 1 }} // Bounce animation
         transition={{
@@ -232,6 +264,12 @@ const FirstCard = () => {
       {/* Card 6: Client Testimonial */}
       <motion.div
         className="p-6 h-80 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col rounded-lg shadow-lg hover:cursor-pointer hover:shadow-2xl transition-transform duration-300 transform hover:scale-105 animate-slideInRight"
+        style={{
+          background: "rgba(255, 255, 255, 0.1)", // Translucent background
+          backdropFilter: "blur(10px)", // Frosted glass effect
+          WebkitBackdropFilter: "blur(10px)", // For Safari
+          border: "1px solid rgba(255, 255, 255, 0.2)", // Subtle border
+        }}
         initial={{ y: -100, opacity: 0 }} // Starts from above and invisible
         animate={{ y: 0, opacity: 1 }} // Final position and full opacity
         transition={{
