@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow: hidden;
+}
+@layer base {
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    cursor: none;
+    background-color: #0a0a0a;
+  }
+}
+
+@layer components {
+  .neon-text {
+    text-shadow: 0 0 10px #00fff5, 0 0 20px #00fff5, 0 0 30px #00fff5;
+  }
+
+  .neon-border {
+    box-shadow: 0 0 10px #00fff5, 0 0 20px rgba(0, 255, 245, 0.5);
+  }
+
+  .neon-button {
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    border: 2px solid #00fff5;
+    color: #00fff5;
+    text-shadow: 0 0 10px #00fff5;
+    transition: all 0.3s ease;
+  }
+
+  .neon-button:hover {
+    background: #00fff5;
+    color: #0a0a0a;
+    box-shadow: 0 0 20px #00fff5;
+  }
+
+  .neon-input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #00fff5;
+    box-shadow: 0 0 10px rgba(0, 255, 245, 0.2);
+  }
+
+  .neon-input:focus {
+    border-color: #ff00ff;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+  }
+}
+
+a,
+button {
+  cursor: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
