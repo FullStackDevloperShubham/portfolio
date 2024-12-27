@@ -40,7 +40,7 @@ export const Navigation = () => {
               download
             >
               <FileText size={20} />
-              <span>Resume</span>
+              <span>Resume.</span>
             </a>
           </div>
         </div>
