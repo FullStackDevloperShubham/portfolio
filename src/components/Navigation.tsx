@@ -35,7 +35,7 @@ export const Navigation = () => {
               </Link>
             ))}
             <a
-              href="/ShubhaGaikwad.pdf"
+              href="/ShubhamGaikwad.pdf"
               className="flex items-center space-x-1   text-gray-400 rounded-lg  "
               download
             >
