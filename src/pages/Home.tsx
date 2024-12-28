@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState, useRef } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
-import { Cpu, Shield, Zap, Activity, Linkedin, Github } from 'lucide-react';
+import { Cpu, Shield, Zap, Activity, Linkedin, Github, Code, Briefcase, User, Mail, ExternalLink } from 'lucide-react';
 
 // Particle System Component
 const Particles = () => {
@@ -42,24 +42,25 @@ const Particles = () => {
   );
 };
 
-// JARVIS Status Component
-const JarvisStatus = () => {
+// Stats Component
+const Stats = () => {
   const stats = [
-    { icon: Shield, label: 'GitHub Repository Number', value: '20+' },
-    // { icon: Cpu, label: 'SYSTEM', value: '100%' },
-    // { icon: Zap, label: 'POWER', value: '92%' },
-    // { icon: Activity, label: 'NETWORK', value: '95%' }
+    { icon: Code, label: 'Projects Completed', value: '25+' },
+    { icon: Briefcase, label: 'Years Experience', value: '2+' },
+    { icon: Shield, label: 'GitHub Repos', value: '20+' },
+    // { icon: Activity, label: 'Contributions', value: '500+' }
   ];
 
   return (
-    <div className="absolute top-8 right-8 space-y-4">
+    <div className="absolute top-8 right-8 space-y-4  ">
       {stats.map(({ icon: Icon, label, value }, index) => (
         <motion.div
           key={index}
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: index * 0.2 }}
-          className="flex items-center gap-3 bg-black/40 backdrop-blur-sm p-3 rounded-lg border border-cyan-500/30"
+          whileHover={{ scale: 1.05, x: -5 }}
+          className="flex items-center gap-3 bg-black/40 backdrop-blur-sm p-3 rounded-lg border border-cyan-500/30 cursor-pointer hover:bg-cyan-900/20"
         >
           <Icon className="w-5 h-5 text-cyan-400" />
           <div>
@@ -85,23 +86,31 @@ const SocialLinks = () => {
       label: 'GitHub',
       href: 'https://github.com/FullStackDevloperShubham',
     },
+    {
+      icon: Mail,
+      label: 'Email',
+      href: 'mailto:forbussiness67@gmail.com',
+    }
   ];
 
   return (
-    <div className=" space-y-4 float-right mt-[21rem] mr-8">
+    <div className="absolute space-y-4 z-50 ml-5 mt-10">
       {links.map(({ icon: Icon, label, href }, index) => (
         <motion.a
-          key={index}
           href={href}
-          target="_blank"
+          key={index}
           rel="noopener noreferrer"
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: index * 0.2 }}
-          className="flex items-center gap-3 bg-black/40 backdrop-blur-sm p-3 rounded-lg border border-cyan-500/30 hover:bg-cyan-500/10"
+          whileHover={{ scale: 1.05, x: -5 }}
+          className="flex items-center gap-3 bg-gradient-to-r from-black/40 via-black/30 to-cyan-900/10 backdrop-blur-lg p-4 rounded-lg border border-cyan-500/50 shadow-md hover:bg-gradient-to-r hover:from-cyan-900/20 hover:via-cyan-500/10 hover:to-black/40 group transition-all duration-300 ease-in-out"
         >
-          <Icon className="w-5 h-5 text-cyan-400" />
-          <span className="text-sm font-bold text-cyan-400">{label}</span>
+          <Icon className="w-6 h-6 text-cyan-400 group-hover:text-cyan-500 group-hover:animate-pulse transition-colors duration-300" />
+          <span className="text-sm font-semibold text-cyan-300 group-hover:text-cyan-100 tracking-wide transition-colors duration-300">
+            {label}
+          </span>
+          <ExternalLink className="w-4 h-4 text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </motion.a>
       ))}
     </div>
@@ -134,13 +143,13 @@ const HolographicRings = () => {
   );
 };
 
-// Enhanced Scene3D Component
+// Scene3D Component
 const Scene3D = () => {
   return (
     <>
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} />
-      <mesh>
+      <mesh rotation={[0, Math.PI * 0.25, 0]}>
         <sphereGeometry args={[1.5, 64, 64]} />
         <meshStandardMaterial
           color="#00fff5"
@@ -153,27 +162,24 @@ const Scene3D = () => {
   );
 };
 
-// Enhanced TypewriterText Component
+// TypewriterText Component
 const TypewriterText = ({ text, className }) => {
   const [displayText, setDisplayText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    let index = 0;
-    const timer = setInterval(() => {
-      if (index < text.length) {
-        setDisplayText((prev) => prev + text[index]);
-        index++;
-      } else {
-        clearInterval(timer);
-      }
-    }, 50);
-
-    return () => clearInterval(timer);
-  }, [text]);
+    if (currentIndex < text.length) {
+      const timer = setTimeout(() => {
+        setDisplayText(prev => prev + text[currentIndex]);
+        setCurrentIndex(prev => prev + 1);
+      }, 50);
+      return () => clearTimeout(timer);
+    }
+  }, [text, currentIndex]);
 
   return (
     <motion.div
-      className={`${className} font-mono`}
+      className={`${className} font-mono relative`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -186,21 +192,39 @@ const TypewriterText = ({ text, className }) => {
       >
         _
       </motion.span>
+      <motion.div
+        className="absolute bottom-0 left-0 h-0.5 bg-cyan-400"
+        initial={{ width: "0%" }}
+        animate={{ width: "100%" }}
+        transition={{ duration: text.length * 0.05 }}
+      />
     </motion.div>
   );
 };
 
+// Skill Badge Component
+const SkillBadge = ({ skill }) => (
+  <motion.div
+    initial={{ opacity: 0, scale: 0.8 }}
+    animate={{ opacity: 1, scale: 1 }}
+    whileHover={{ scale: 1.1 }}
+    className="px-3 py-1 bg-cyan-500/10 rounded-full border border-cyan-500/30 text-cyan-400 text-sm"
+  >
+    {skill}
+  </motion.div>
+);
 
-// Main Home Component
+// Main App Component
 export const Home = () => {
   const [showContent, setShowContent] = useState(false);
+  const skills = ['React', 'Node.js', 'TypeScript', 'MongoDB', 'AWS', 'Docker'];
 
   useEffect(() => {
     setShowContent(true);
   }, []);
 
   return (
-    <div className="relative h-screen w-screen bg-gradient-to-br from-gray-900 via-[#0a0a0a] to-gray-900 text-white overflow-hidden">
+    <div className="relative h-screen w-screen bg-gradient-to-br from-gray-900 via-[#0a0a0a] to-gray-900 text-white overflow-hidden font-sans">
       <Particles />
       <HolographicRings />
 
@@ -212,7 +236,7 @@ export const Home = () => {
         </Canvas>
       </div>
 
-      <JarvisStatus />
+      <Stats />
       <SocialLinks />
 
       <AnimatePresence>
@@ -222,7 +246,7 @@ export const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.8 }}
-            className="relative z-10 flex items-center justify-center h-full"
+            className="relative z-10 flex items-center justify-center h-full font-heading"
           >
             <div className="max-w-4xl mx-auto px-6 text-center">
               <motion.div
@@ -231,9 +255,9 @@ export const Home = () => {
                 transition={{ duration: 0.5 }}
                 className="mb-8"
               >
-                <motion.div className="relative inline-block">
+                <motion.div className="relative inline-block mb-8">
                   <motion.h1
-                    className="text-5xl md:text-7xl font-bold mb-4"
+                    className="text-5xl md:text-7xl font-extrabold"
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: 'spring', stiffness: 300 }}
                   >
@@ -254,48 +278,49 @@ export const Home = () => {
                 </motion.div>
 
                 <TypewriterText
-                  text="I am a passionate full-stack developer with a zeal for crafting dynamic web solutions. Always eager to learn, I embrace new technologies to expand my skillset and deliver excellence projects."
+                  text="I am a passionate full-stack developer with a zeal for crafting dynamic web solutions. Always eager to learn, I embrace new technologies to expand my skillset and deliver excellent projects."
                   className="text-xl md:text-2xl text-gray-300 mb-8"
                 />
 
+                <motion.div
+                  className="flex flex-wrap justify-center gap-3 mb-8"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1 }}
+                >
+                  {skills.map((skill, index) => (
+                    <SkillBadge key={skill} skill={skill} />
+                  ))}
+                </motion.div>
+
                 <div className="flex gap-4 justify-center">
-
-
-                  <a
+                  <motion.a
                     href="https://github.com/FullStackDevloperShubham"
                     target="_blank"
                     rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-3 bg-cyan-500/10 text-cyan-400 font-semibold rounded-lg border border-cyan-500/50 hover:bg-cyan-500/20 transition-colors duration-300 flex items-center gap-2"
                   >
-                    <motion.button
-                      className="px-8 py-3 bg-transparent text-cyan-400 font-semibold 
-               rounded-lg border border-cyan-500/50
-               hover:bg-cyan-500/10 transition-colors duration-300"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      👀 Code
-                    </motion.button>
-                  </a>
+                    <Code className="w-5 h-5" />
+                    View Projects
+                  </motion.a>
+                  <motion.a
+                    href="mailto:forbussiness67@gmail.com"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-3 bg-transparent text-cyan-400 font-semibold rounded-lg border border-cyan-500/50 hover:bg-cyan-500/10 transition-colors duration-300 flex items-center gap-2"
+                  >
+                    <Mail className="w-5 h-5" />
+                    Contact Me
+                  </motion.a>
                 </div>
               </motion.div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-
-      <style jsx global>{`
-        @keyframes float {
-          0%, 100% {
-            transform: translate(0, 0);
-          }
-          50% {
-            transform: translate(
-              calc(var(--mouse-x, 0) * 20px),
-              calc(var(--mouse-y, 0) * 20px)
-            );
-          }
-        }
-      `}</style>
     </div>
+
   );
-};
+}

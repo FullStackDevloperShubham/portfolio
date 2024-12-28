@@ -6,6 +6,10 @@ export default {
       animation: {
         orbit: "orbit calc(var(--duration)*1s) linear infinite",
       },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        heading: ['Poppins', 'sans-serif'],
+      },
       keyframes: {
         orbit: {
           "0%": {
